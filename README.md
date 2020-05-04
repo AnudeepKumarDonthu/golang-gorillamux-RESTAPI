@@ -1,5 +1,6 @@
 # golang-gorillamux-RESTAPI
 
+
 This is Simple simgle page golang REST API Application which contain 4 sample APIs.
 
 Command to Run the Application
@@ -30,3 +31,7 @@ http://localhost:8080/addstring/sample text -->  POST end point to add sample te
 4th API
 --------
 http://localhost:8080/addjson --> POST end point to add a json object to a in memory list and return the complete list of json Object List in json format
+post request body :
+{
+	"data":"sample text"
+}
