@@ -13,3 +13,20 @@ Command to Run the Application
 Command 5 Explanation
 1) It contain total 2 commmand 1 is "go build" which is used to build the executable file based on the platform specific
 2) http-api is the command to run the executable file
+
+
+1st API
+--------
+http://localhost:8080/testjson --> GET end point Return json response "{"Status":"Application is Running"}" which indicate Application Running Status
+
+2st API
+--------
+http://localhost:8080/teststring --> GET end point Return String response "Application is Running" which indicate Application Running Status
+
+3rd API
+--------
+http://localhost:8080/addstring/sample text -->  POST end point to add sample text to in memory list and return the complete list of strings as a response i json format
+
+4th API
+--------
+http://localhost:8080/addjson --> POST end point to add a json object to a in memory list and return the complete list of json Object List in json format

@@ -9,7 +9,7 @@ import (
 
 // Items is a struct to hold the json body from the post request
 type Items struct {
-	data string
+	Data string
 }
 
 var data []string
