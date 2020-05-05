@@ -38,10 +38,16 @@ func main() {
 	http.ListenAndServe(":8080", router)
 }
 
+/*
+	All End point handler Function Definitions
+*/
+
+//teststring
 func teststring(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Application is Running"))
 }
 
+//testjson
 func testjson(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(struct {
@@ -49,6 +55,7 @@ func testjson(w http.ResponseWriter, r *http.Request) {
 	}{"Application is Running"})
 }
 
+//addstring/{datavalue}
 func addString(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	mainData := mux.Vars(r)["datavalue"]
@@ -56,6 +63,7 @@ func addString(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(data)
 }
 
+//adduser
 func addUser(w http.ResponseWriter, r *http.Request) {
 	var newItem Items
 	json.NewDecoder(r.Body).Decode(&newItem)
@@ -63,6 +71,7 @@ func addUser(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("User Added Successfully"))
 }
 
+//getallusers
 func getAllUsers(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(peopleData)
