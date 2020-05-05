@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+	"strconv"
 
 	"github.com/gorilla/mux"
 )
@@ -15,15 +16,18 @@ type UserAddress struct {
 }
 
 // Items is a struct to hold the json body from the post request
-type Items struct {
+type User struct {
+	ID          int         `json:"id"`
 	Name        string      `json:"name"`
 	Age         int         `json:"age"`
 	Useraddress UserAddress `json:"useraddress"`
 }
 
+var newID int
+
 var data []string
 
-var peopleData []Items
+var peopleData []User
 
 func main() {
 	router := mux.NewRouter()
@@ -65,10 +69,12 @@ func addString(w http.ResponseWriter, r *http.Request) {
 
 //adduser
 func addUser(w http.ResponseWriter, r *http.Request) {
-	var newItem Items
+	newID = newID + 1
+	var newItem User
+	newItem.ID = newID
 	json.NewDecoder(r.Body).Decode(&newItem)
 	peopleData = append(peopleData, newItem)
-	w.Write([]byte("User Added Successfully"))
+	w.Write([]byte("User Added Successfully with id : " + strconv.Itoa(newID)))
 }
 
 //getallusers
