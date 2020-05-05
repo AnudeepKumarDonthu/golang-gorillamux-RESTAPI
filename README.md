@@ -44,6 +44,6 @@ post request body :
 	}
 }
 
-4th API
+5th API
 --------
 http://localhost:8080/getallusers --> GET end point to get all User details in json object
