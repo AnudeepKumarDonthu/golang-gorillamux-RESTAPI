@@ -16,7 +16,7 @@ type Items struct {
 
 var data []string
 
-var itemsData []Items
+var peopleData []Items
 
 func main() {
 	router := mux.NewRouter()
@@ -49,6 +49,6 @@ func addItems(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var newItem Items
 	json.NewDecoder(r.Body).Decode(&newItem)
-	itemsData = append(itemsData, newItem)
-	json.NewEncoder(w).Encode(itemsData)
+	peopleData = append(peopleData, newItem)
+	json.NewEncoder(w).Encode(peopleData)
 }
