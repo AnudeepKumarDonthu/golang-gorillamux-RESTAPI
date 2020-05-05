@@ -26,11 +26,11 @@ http://localhost:8080/teststring --> GET end point Return String response "Appli
 
 3rd API
 --------
-http://localhost:8080/addstring/sample text -->  POST end point to add sample text to in memory list and return the complete list of strings as a response i json format
+http://localhost:8080/addstring/sample text -->  POST end point to add sample text to in memory list and return the complete list of strings as a response in json format
 
 4th API
 --------
-http://localhost:8080/adduser --> POST end point to add user details to a in memory list and return the success message as "User Added Successfully with id :<Auto increment id value>"
+http://localhost:8080/adduser --> POST end point to add user details to a in memory list and return the success message as "User Added Successfully with id :Auto increment id value"
 
 post request body :
 
