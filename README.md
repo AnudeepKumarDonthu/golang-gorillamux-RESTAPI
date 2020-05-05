@@ -31,7 +31,11 @@ http://localhost:8080/addstring/sample text -->  POST end point to add sample te
 4th API
 --------
 http://localhost:8080/addjson --> POST end point to add a json object to a in memory list and return the complete list of json Object List in json format
+
 post request body :
+
 {
-	"data":"sample text"
+	"name":"Golanf",
+	"age":10,
+	"place" :"Google"
 }
