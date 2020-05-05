@@ -30,7 +30,7 @@ http://localhost:8080/addstring/sample text -->  POST end point to add sample te
 
 4th API
 --------
-http://localhost:8080/adduser --> POST end point to add user details to a in memory list and return the success message as "User Added Successfully with id :<Auto ++ id value>"
+http://localhost:8080/adduser --> POST end point to add user details to a in memory list and return the success message as "User Added Successfully with id :<Auto increment id value>"
 
 post request body :
 
