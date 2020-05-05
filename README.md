@@ -35,7 +35,7 @@ http://localhost:8080/addjson --> POST end point to add a json object to a in me
 post request body :
 
 {
-	"name":"Golanf",
+	"name":"Golang",
 	"age":10,
 	"place" :"Google"
 }
