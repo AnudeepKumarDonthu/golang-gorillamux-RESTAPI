@@ -1,7 +1,7 @@
 # golang-gorillamux-RESTAPI
 
 
-This is Simple simgle page golang REST API Application which contain 4 sample APIs.
+This is Simple simgle page golang REST API Application which contain 5 sample APIs.
 
 Command to Run the Application
 ------------------------------------
